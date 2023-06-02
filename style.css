@@ -23,7 +23,9 @@
   /*  (key background) */
   --key-bg-orange: hsl(30, 25%, 89%);
   --key-shadow-orange: hsl(28, 16%, 65%);
-
+  --key-hover-1: hsl(0, 0%, 100%);
+  --key-hover-2: hsl(225, 21%, 59%);
+  --key-hover-3: hsl(6, 63%, 60%);
   /* #### Text */
 
   --txt-dark-desaturated: hsl(221, 14%, 31%);
@@ -52,7 +54,8 @@
   /*  (key background) */
   --key-bg-orange: hsl(45, 7%, 89%);
   --key-shadow-orange: hsl(35, 11%, 61%);
-
+  --key-hover-1: hsl(0, 0%, 100%);
+  --key-hover-3: hsl(25, 98%, 50%);
   /* #### Text */
   --txt-dark-desaturated: hsl(60, 10%, 19%);
   --white: hsl(0, 0%, 100%);
@@ -78,7 +81,8 @@
   /*  (key background) */
   --key-bg-orange: hsl(268, 47%, 21%);
   --key-shadow-orange: hsl(290, 70%, 36%);
-
+  --key-hover-1: hsl(290, 70%, 21%);
+  --key-hover-3: hsl(176, 100%,50%);
   /* #### Text */
   --txt-light-yellow: hsl(52, 100%, 62%);
   --txt-dark-desaturated: hsl(198, 20%, 13%);
@@ -218,10 +222,20 @@ button {
   box-shadow: inset 0 -3px 1px var(--key-shadow-orange);
   cursor: pointer;
 }
+button:not(.reset,.delete,.equal):hover{
+  background-color: var(--key-hover-1);
+}
 .reset,
 .delete,
 .equal {
   font-size: clamp(2.2rem, 2.5vw, 2.8rem);
+}
+.reset:hover,
+.delete:hover{
+  opacity: 0.8;
+}
+.equal:hover{
+  background-color: var(--key-hover-3);
 }
 .reset,
 .delete {
